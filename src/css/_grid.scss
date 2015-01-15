@@ -1,0 +1,60 @@
+
+// This is just a 3 cell grid. But the principle
+// used here can be adjusted for whatevz
+.grid {
+  text-align: justify;
+  position: relative;
+}
+
+  .grid:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+  }
+
+  .grid__cell {
+    box-sizing: border-box;
+    padding: 1em;
+    display: inline-block;
+    width: 31%;
+    background: #444;
+    color: white;
+    vertical-align: top;
+    overflow: auto;
+  }
+
+  // Hack to force an aspect ratio. Remember, that an
+  // element's padding in percentages is a percentage
+  // of its parent's width. So, this creates an element
+  // that is the same height as the parent's width
+  .grid__cell:before {
+    content: '';
+    float: left;
+    padding-top: 100%;
+    width: 0;
+    background: red;
+  }
+
+// This is just a 3 cell grid. But the principle
+// used here can be adjusted for whatevz
+.alt-grid {
+  display: table;
+
+  // Useful for preventing double-borders on adjoining cells
+  border-collapse: collapse;
+
+  // If you wanted to put spacing between cells,
+  // you would do this (but it doesn't work with
+  // border-collapse: collapse):
+  // border-spacing: 0.5em;
+}
+
+.alt-grid__cell {
+  border: 1px solid #EEE;
+  box-sizing: border-box;
+  width: 30%;
+  padding: 1em;
+  background: #444;
+  color: white;
+  display: table-cell;
+}
