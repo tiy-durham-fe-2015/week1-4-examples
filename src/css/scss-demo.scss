@@ -1,16 +1,36 @@
 @import 'reset';
 @import 'defaults';
 
+$pink: #d2127b;
+$blue: #1c6375;
+$light-blue: #69cce0;
+$pale-pink: #ffd1ee;
+$dark-pink: #970b5d;
+
+$hilight-background: $blue;
+$hilight-foreground: $light-blue;
+
 body {
   font-family: sans-serif;
 }
 
+
 .link-button {
   display: inline-block;
-  background: #d2127b;
-  color: white;
+  background: $hilight-background;
+  color: $hilight-foreground;
   text-decoration: none;
   padding: 1em;
+
+  &:hover {
+    background: $hilight-foreground;
+    color: $hilight-background;
+  }
+
+  &:focus {
+    //mix($color, white, $percentage)
+    outline: 10px solid mix($hilight-background, black, 50%);
+  }
 
   // Generally, don't do chaining
   strong {
@@ -18,14 +38,14 @@ body {
   }
 }
 
-.link-button:hover {
-  background: white;
-  color: #d2127b;
-}
+// .link-button:hover {
+//   background: white;
+//   color: #d2127b;
+// }
 
-.link-button:focus {
-  outline: 10px solid #970b5d;
-}
+// .link-button:focus {
+//   outline: 10px solid #970b5d;
+// }
 
 // // Generally, don't do chaining
 // .link-button strong {
