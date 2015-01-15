@@ -1,0 +1,19 @@
+// Stolen from here:
+// http://www.justinaguilar.com/animations/index.html
+.floating {
+	animation-name: floating;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+	0% {
+		transform: translateY(0%);
+	}
+	50% {
+		transform: translateY(8%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}

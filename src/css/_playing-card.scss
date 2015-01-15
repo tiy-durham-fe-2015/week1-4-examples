@@ -8,6 +8,14 @@
   max-width: 5em;
   margin: auto;
   min-height: 7em;
+
+  // Much more here:
+  // http://css-tricks.com/almanac/properties/t/transition/
+  transition: all 1s;
+}
+
+.playing-card:hover {
+  background: #3e239d;
 }
 
 .playing-card__letter {
