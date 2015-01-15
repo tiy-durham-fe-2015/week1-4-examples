@@ -3,7 +3,48 @@
   <head>
     <meta charset="utf-8">
     <title>Styling Radios and Checkboxes</title>
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <div class="main-content">
+
+      <form class="demo-form">
+
+        <h1>This is a demo of styling checkboxes</h1>
+
+        <div class="form-group">
+          <label class="checkable">
+            <input class="checkable__input" type="checkbox" name="agree">
+            <span class="checkable__label">Agree?</span>
+          </label>
+        </div>
+
+        <div class="form-group">
+          <h2>Gender</h2>
+          <label class="checkable">
+            <input class="checkable__input" type="radio" name="gender" value="male">
+            <span class="checkable__label">Male</span>
+          </label>
+          <label class="checkable">
+            <input class="checkable__input" type="radio" name="gender" value="female">
+            <span class="checkable__label">Female</span>
+          </label>
+        </div>
+
+        <div class="form-group">
+          <h2>Oui?</h2>
+          <label class="togglable">
+            <input type="checkbox" class="togglable__input" />
+            <span class="togglable__label">
+              <span class="togglable__checked">Yes</span>
+              <span class="togglable__unchecked">No</span>
+            </span>
+          </label>
+        </div>
+
+      </form>
+
+    </div>
+
   </body>
 </html>

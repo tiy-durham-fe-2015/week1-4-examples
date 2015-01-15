@@ -1,0 +1,110 @@
+// checkable styles checkboxes/radios all nice
+// and purty like
+.checkable {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding-left: 1.25em;
+}
+
+  // First, we have to hide the checkbox or radio itself
+  // by pulling it outside of its parent
+  .checkable__input {
+    opacity: 0; // this makes it invisible, but still focusable
+    position: absolute;
+  }
+
+  // Add a pseudo element that will look kind of
+  // like a checkbox
+  .checkable__label:before {
+    font-family: "my-icons";
+    content: ' ';
+    position: absolute;
+    background: white;
+    left: 0;
+    top: 0.2em;
+    width: 0.75em;
+    height: 0.75em;
+    border: 1px solid #436ba0;
+    border-radius: 2px;
+  }
+
+  // When the actual checkbox is checked,
+  // change the styles of the pseudo checkbox
+  input[type=checkbox]:checked + .checkable__label:before {
+    content: 'a';
+    line-height: 0.5em;
+    color: #1992e2;
+  }
+
+  // Making this render like a radio when it
+  // follows a radio
+  input[type=radio] + .checkable__label:before {
+    border-radius: 1em;
+    box-shadow: inset 0 0 0 2px white;
+  }
+
+  // When the actual radio is checked,
+  // change the styles of the pseudo radio
+  input[type=radio]:checked + .checkable__label:before {
+    background: #1992e2;
+  }
+
+
+///////////////////////////////////////////
+// The togglable style turns a checkbox
+// into a toggle
+
+.togglable__input {
+  opacity: 0;
+  position: absolute;
+}
+
+.togglable__label {
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+  background: #CCC;
+  padding: 0.25em 0.5em 0.25em 2em;
+  border-radius: 1em;
+  min-width: 2em;
+  color: #FFF;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.togglable__label:after {
+  content: ' ';
+  display: block;
+  background: #FFF;
+  width: 1.1em;
+  height: 1.1em;
+  border-radius: 1em;
+  position: absolute;
+  left: 0.4em;
+  top: 0.4em;
+  transition: left 0.15s, margin-left 0.15s;
+}
+
+.togglable__checked {
+  display: none;
+}
+
+.togglable__input:checked ~ .togglable__label {
+  background: #8ad869;
+  padding-left: 0.5em;
+  padding-right: 2em;
+
+  .togglable__unchecked {
+    display: none;
+  }
+
+  .togglable__checked {
+    display: inline-block;
+  }
+}
+
+.togglable__input:checked ~ .togglable__label:after {
+  left: 100%;
+  margin-left: -1.5em;
+}
