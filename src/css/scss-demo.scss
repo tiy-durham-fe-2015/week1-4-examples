@@ -1,0 +1,52 @@
+@import 'reset';
+@import 'defaults';
+
+body {
+  font-family: sans-serif;
+}
+
+.link-button {
+  display: inline-block;
+  background: #d2127b;
+  color: white;
+  text-decoration: none;
+  padding: 1em;
+
+  // Generally, don't do chaining
+  strong {
+    font-size: 2em;
+  }
+}
+
+.link-button:hover {
+  background: white;
+  color: #d2127b;
+}
+
+.link-button:focus {
+  outline: 10px solid #970b5d;
+}
+
+// // Generally, don't do chaining
+// .link-button strong {
+//   font-size: 2em;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Some comments
