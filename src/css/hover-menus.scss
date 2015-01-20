@@ -1,0 +1,77 @@
+@import 'reset';
+
+body {
+  font-family: sans-serif;
+  padding: 8em 2em;
+}
+
+.menu-container {
+  position: relative;
+}
+
+.menu-trigger {
+  display: inline-block;
+  background: deeppink;
+  color: white;
+  padding: 1em;
+  text-decoration: none;
+}
+
+.menu-flyout {
+  position: absolute;
+  bottom: 3em;
+  border: 1px solid #999;
+  box-shadow: 0 0 1em #444;
+  min-width: 9em;
+  opacity: 0;
+  // display: none;
+}
+
+.menu-item {
+  padding: 0.5em;
+}
+
+.menu-item + .menu-item {
+  border-top: 1px solid #999;
+}
+
+.menu-trigger:hover {
+  background: white;
+  color: deeppink;
+}
+
+.menu-trigger:hover + .menu-flyout {
+  background: deeppink;
+  color: white;
+  opacity: 1;
+
+  transition: opacity 0.4s;
+  // display: block;
+}
+
+.menu-flyout:hover {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Don't trim whitespace
