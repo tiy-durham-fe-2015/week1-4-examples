@@ -107,3 +107,55 @@
   left: 100%;
   margin-left: -1.5em;
 }
+
+
+///////////////////////////////////////////
+// Shadowy is just a demo of form styling
+//
+.shadowy {
+  background: #222;
+  padding: 2em;
+  margin-bottom: 2em;
+  color: #EEE;
+  border-radius: 1em;
+  white-space: nowrap;
+
+
+  // 0 is the horizontal shift
+  // 0.5em is the vertical shift (down)
+  // 1.5 is the blur radius
+  // -0.15em is the spread radius, tucking the shadow under
+  // #444 is the shadow color
+  box-shadow: 0 0.5em 1.5em -0.15em #444;
+}
+
+.shadowy-input {
+  font-size: 1em;
+  background: #444;
+  border: 1px solid dodgerblue;
+  border-bottom-color: mix(white, dodgerblue, 50%);
+  padding: 0.5em;
+  border-radius: 0.25em;
+  outline: none;
+  color: inherit;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.shadowy-button {
+  font-size: 1em;
+  padding: 0.5em;
+  background: dodgerblue;
+  color: white;
+  border: 1px solid dodgerblue;
+  border-radius: 0.25em;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+  // inset puts box-shadow on the inside
+  // 0 is the horizontal shift
+  // 1em is the vertical shift (down)
+  // 0 is the blur radius (making it look solid)
+  // finally, we skip the spread radius and specify color
+  box-shadow: inset 0 1em 0 mix(white, dodgerblue, 40%);
+}

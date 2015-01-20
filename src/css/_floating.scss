@@ -2,18 +2,19 @@
 // http://www.justinaguilar.com/animations/index.html
 .floating {
 	animation-name: floating;
+	animation-timing-function: ease-in-out;
 	animation-duration: 1.5s;
 	animation-iteration-count: infinite;
 }
 
 @keyframes floating {
 	0% {
-		transform: translateY(0%);
+		transform: translate(0, 0);
 	}
 	50% {
-		transform: translateY(8%);
+		transform: translateY(20%);
 	}
 	100% {
-		transform: translateY(0%);
+		transform: translate(0, 0);
 	}
 }
