@@ -142,6 +142,11 @@
   border-bottom-right-radius: 0;
 }
 
+.shadowy-input:hover {
+  background: #888;
+  transition: background-color ease-in-out 1s;
+}
+
 .shadowy-button {
   font-size: 1em;
   padding: 0.5em;
