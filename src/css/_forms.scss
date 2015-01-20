@@ -126,7 +126,7 @@
   // 1.5 is the blur radius
   // -0.15em is the spread radius, tucking the shadow under
   // #444 is the shadow color
-  box-shadow: 0 0.5em 1.5em -0.15em #444;
+  box-shadow: 0 0.5em 1.5em -0.15em red;
 }
 
 .shadowy-input {
@@ -144,7 +144,7 @@
 
 .shadowy-input:hover {
   background: #888;
-  transition: background-color ease-in-out 1s;
+  transition: background ease-in-out 1s;
 }
 
 .shadowy-button {
@@ -164,3 +164,25 @@
   // finally, we skip the spread radius and specify color
   box-shadow: inset 0 1em 0 mix(white, dodgerblue, 40%);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Don't trim spaces, Atom

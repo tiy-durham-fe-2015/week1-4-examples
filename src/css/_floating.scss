@@ -1,20 +1,40 @@
 // Stolen from here:
 // http://www.justinaguilar.com/animations/index.html
 .floating {
-	animation-name: floating;
+	animation-name: bouncing;
 	animation-timing-function: ease-in-out;
-	animation-duration: 1.5s;
-	animation-iteration-count: infinite;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }
 
-@keyframes floating {
+@keyframes bouncing {
 	0% {
-		transform: translate(0, 0);
+		background: orange;
 	}
 	50% {
-		transform: translateY(20%);
+		background: blue;
 	}
 	100% {
-		transform: translate(0, 0);
+		background: green;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Stupid editor
